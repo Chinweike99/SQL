@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Language Quiz</title>
+        <link rel="stylesheet" href="/styles/styles.css">
+    </head>
+
+    <body id="app">
+        <div class="main-div">
+            <form action="/submit" method="post">
+                <div class="horizontal-container">
+                    <h3>
+                      Total Score:
+                      <span id="score">
+                        <%= locals.totalScore ? totalScore : "0" %>
+                      </span>
+                    </h3>
+              
+                  </div>
+                
+                <h2>
+                    <%= question.country %>
+                </h2>
+              
+                <div class="input-div">
+                    <input type="text" name="language" id="" placeholder="Official Language" autocomplete="off" autofocus>
+                </div>
+                <button>Submit<% if(locals.Correct){ %>
+                    <span class="checkmark">✔</span>
+                    <% } else if (locals.Correct===false) { %>
+                      <span class="cross" id="error">✖</span>
+                      <% } %>
+                </button>
+            </form>
+        </div>
+
+        <script>
+            var Correct = "<%= locals.wasCorrect%>";
+            if(Correct === false){
+                alert("Game Over: Final best score: <%= locals.totalScore %>");
+                document.getElementById("app").innerHTML = '<a href="/" class="restart-button">Restart</a>'
+            }
+        </script>
+    </body>
+
+</html>

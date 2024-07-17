@@ -1,0 +1,68 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgb(47, 141, 142);
+}
+.main-div{
+    margin: 30px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+h2{
+    color: #fff;
+    margin-bottom: 10px;
+}
+h3 {
+    margin: 0;
+  }
+form {
+    background-color: blue;
+    width: 70%;
+    padding: 15px;
+}
+.input-div input{
+    width: 78.2%;
+    padding: 4px;
+    font-size: 20px;
+    height: 30px;
+}
+button{
+    padding: 4px;
+    width: 80%;
+    font-size: 20px;
+    height: 40px;
+    font-weight: 600;
+    margin-top: 10px;
+}
+button:hover{
+    background: #206f1a;
+    color: #fff;
+    transition: all ease-in-out 0.7s;
+    outline: none;
+    border: none;
+}
+
+.restart-button {
+    position: absolute;
+    top: 45%;
+    left: 47.5%;
+    display: inline-block;
+    background-color: #fff;
+    color: #333;
+    padding: 15px 30px;
+    font-size: 18px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 30px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
