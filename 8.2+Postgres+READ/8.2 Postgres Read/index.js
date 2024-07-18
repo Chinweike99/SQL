@@ -52,12 +52,6 @@ app.post("/submit", (req, res) => {
     isCorrect = true;
   }
 
-  // if (currentQuestion.name.toLowerCase() === answer.toLowerCase()) {
-  //   totalCorrect++;
-  //   console.log(totalCorrect);
-  //   isCorrect = true;
-  // }
-
   nextQuestion();
   res.render("index.ejs", {
     question: currentQuestion,
