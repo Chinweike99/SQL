@@ -12,7 +12,6 @@ const DB = new pg.Client({
     port: 5432,
     user: "postgres",
 });
-
 DB.connect();
 
 let sumOfCorrect = 0;

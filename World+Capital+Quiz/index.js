@@ -12,7 +12,6 @@ const db = new pg.Client({
   password: "Innocent321@",
   port: 5432,
 });
-
 db.connect();
 
 let quiz = [
@@ -20,7 +19,6 @@ let quiz = [
   { country: "United Kingdom", capital: "London" },
   { country: "United States of America", capital: "New York" },
 ];
-
 // Get records from captials table in SQL
 db.query("SELECT * FROM capitals", (err, res) => {
   if (err){
