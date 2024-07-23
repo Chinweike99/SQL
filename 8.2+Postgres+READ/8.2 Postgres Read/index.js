@@ -5,8 +5,6 @@ import pg from "pg";
 const app = express();
 const port = 3000;
 
-let totalCorrect = 0;
-
 const DB = new pg.Client({
   user: "postgres",
   host: "localhost",
@@ -14,10 +12,10 @@ const DB = new pg.Client({
   password: "Innocent321@",
   port: 5432,
 });
-
 DB.connect();
 
 let quiz = [];
+let totalCorrect = 0;
 
 DB.query("SELECT * FROM flags", (err, res)=>{
   if (err){
